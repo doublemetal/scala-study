@@ -10,7 +10,10 @@
 - [Programming in Scala, First Edition](http://www.artima.com/pins1ed/index.html)
 - [자바 프로그래머를 위한 스칼라 튜토리얼](http://docs.scala-lang.org/ko/tutorials/scala-for-java-programmers.html)
 - [The busy Java developer's guide to Scala](http://www.ibm.com/developerworks/java/library/j-scala01228/index.html)
+
+## 슬라이드
 - [Scala로의 산책](http://www.slideshare.net/yumi6/scala-56107367)
+- [Scala For Java Programmers](http://www.slideshare.net/ennorunne/scala-for-java-programmers-2973915)
 
 ## 동영상
 - [coursera 스칼라 강의](https://class.coursera.org/progfun-005)
