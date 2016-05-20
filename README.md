@@ -13,4 +13,4 @@
 - [Scala로의 산책](http://www.slideshare.net/yumi6/scala-56107367)
 
 ## 동영상
-- [coursera 스칼라 강의] https://class.coursera.org/progfun-005
+- [coursera 스칼라 강의](https://class.coursera.org/progfun-005)
