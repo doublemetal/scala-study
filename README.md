@@ -1,5 +1,5 @@
-# Scala-Study
 ![](http://zigatta.com/wp-content/uploads/2015/07/logo_scala.png)
+
 ## 환경설정
 - [Download Scala 2.11.8 binaries](http://www.scala-lang.org/download/)
 - [Download Scala IDE for Eclipse](http://scala-ide.org/download/sdk.html)
