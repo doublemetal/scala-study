@@ -1,0 +1,157 @@
+# Currying
+
+이 글은 Currying에 대하여 설명한 글입니다.
+
+## 함수를 리턴하자!!
+
+지난번 Factorial 관련글에서 아래와 같은 소스를 작성했습니다...
+
+[source , javascript]
+def SumInts(a:Int , b:Int) = sum( x => x ,a , b)
+def SumCube(a:Int , b:Int) = sum( x => x * x * x ,a , b)
+def sum( f:Int => Int , a:Int , b:Int) : Int = {
+  if(a > b) 0 else f(a) + sum(f , a +1 , b)
+}
+
+조금 더 줄여볼까...
+
+[source , javascript]
+def SumInts(a:Int , b:Int) = sum( x => x ,a , b)
+def SumCube(a:Int , b:Int) = sum( x => x * x * x ,a , b)
+
+중복이 보이십니까...보이십니까...보이십니까...
+
+a:Int..보이십니까..b:Int...
+
+SumInts 함수와 SubCube 함수는 Int형 변수 2개를 Int를 return하는 함수 입니다.
+
+sum 함수를 함수를 return 하는 함수로 변경하면 어떻게 될까..
+
+[source , javascript]
+def newSum( f:Int => Int ) : (Int , Int) => Int = {
+    def sumF(a:Int , b:Int) : Int  = {
+      if(a > b) 0
+      else f(a) + sumF(f , a +1 , b)
+    }
+    sumF
+}
+def newSumInts = newSum( x => x)
+def newCube = newSum( x => x * x * x)
+newSumInts(1,10) // 55
+newCube(1,10) // 3025
+
+이렇게 스칼라는 함수를 리턴하는 요상한(?) 일을 할 수 있습니다.
+
+## This is Last Boss , Currying
+
+위의 예제에서.. newSum 함수를 이용해서 newSumInts 함수를 선언한 모습을 볼수 있습니다.
+
+[source , javascript]
+def newSumInts = newSum( x => x)
+newSumInts(1,10) // 55
+
+newSumInts를 선언하지 않고 사용 할 수 있는 방법은..??
+
+( 왜..왜...왜..왜..그래야하지... )
+
+[source , javascript]
+newSum( x => x)(1,10) //55
+
+위의 코드는 이렇게 동작합니다..
+
+1. newSum 이라는 함수에 x => x 함수를 파라미터로 넘겨주면서 호출하면 x => x를 사용하여 숫자를 더하는
+함수를 리턴 합니다.
+
+2. 이것은 위의 예제의 newSum과 정확하게 일치합니다.
+
+3. 이렇게 리턴된 함수에 1과 10을 파라미터로 넘겨주면서 호출하게 됩니다.
+이것은 newSumInts(1,0)을 수행하는 것과 동일합니다.
+
+여기까지 이해가 되셨나요.. 그럼 이제 그분을 만나러 가시죠...
+
+Currying...
+
+
+개발자는 소스먼저 ...
+
+[source , javascript]
+def currySum(f:Int => Int)(a:Int , b:Int):Int = {
+    if(a > b)  0 else f(a) + currySum(f)(a+1 , b)
+}
+
+그리고 아래 소스는 이전에 함수를 파라미터로 받는 예제 소스 입니다..
+
+[source , javascript]
+def sum( f:Int => Int , a:Int , b:Int) : Int = {
+  if(a > b) 0 else f(a) + sum(f , a +1 , b)
+}
+
+두개의 소스는 거의 비슷 합니다. 함수의 파라미터 선언 부분이 조금(?) 다른것 빼고는..
+
+심저어 사용 법도 유사합니다.
+
+[source , javascript]
+sum(x => x ,1 , 10) //55
+currySum(x => x)(1,10) //55
+
+하지만, currySum(currying 함수)은 모든 파라미터를 전달하지 않고도 호출 할 수 있습니다...
+
+이게 무슨 말일까요..@@@@
+
+[source , javascript]
+val t = currySum(x=>x)_ // (Int, Int) => Int
+t(1,10) // 55
+//currySum(x=>x) 뒤에 '_' 표시는 다음에 설명하도록 하겠습니다...
+
+위의 코드를 보면 currySum에 첫번째 파라미터(함수)만 전달하면서 호출하면
+
+int형 변수 두개를 입력받아 int 형 변수를 return하는  함수를 return 합니다.
+
+그 이후 t를 이용하여 t(1,0)과 같이 사용 할 수 있습니다.
+
+처음에 설명했던 아래 소스와 동일하게 동작 한다고 할 수 있습니다.
+
+[source , javascript]
+def newSumInts = newSum( x => x)
+newSumInts(1,10) // 55
+
+정리하면...
+
+[source , javascript]
+currySum(x => x)(1,10) //55
+
+위와 같은 currying 함수는 a와b를 입력받아 a~b까지 합을 더하는 함수를 return하고,
+
+return된 함수를 1과10을 파라미터로 전달하면서 호출합니다.
+
+이해가 되시나요...Recursive 함수를 빼고 다시한번..
+
+두수의 곱을 구하는 간단한 currying 함수 입니다.
+
+[source , javascript]
+def calculate(x:Int)(y:Int) : Int = {
+    x * y
+}
+
+먼저, 바로 값 출력하기..
+
+[source , javascript]
+calculate(3)(3)  // 9
+
+2의 배수 리턴하는 함수 사용하기..
+
+[source , javascript]
+val cal_2 = curry.calculate(2)_
+cal_2(5) //10
+
+3의 배수 리턴하는 함수 사용하기..
+
+[source , javascript]
+val cal_3 = curry.calculate(3)_
+cal_3(5) //15
+
+커링(http://docs.scala-lang.org/ko/tutorials/tour/currying) 에 대한 스칼라 튜토리얼도
+
+참고하시면 좋을 것 같습니다.
+
+지금까지 스칼라의 currying에 대해서 설명하였습니다.
