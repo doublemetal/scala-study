@@ -108,7 +108,7 @@ else loop(a + 1 , f(a) + acc)
 
 But...
 
-스칼라는 Tail Recursive한 함수는 반복문으로 변환해서 컴파일을 수행합니다.
+스칼라는 Tail Recursive 함수는 반복문으로 변환해서 컴파일을 수행합니다.
 
 이상 스칼라의 Factorial의 구현 방법과 재귀함수의 종류에 대한 이야기 였습니다.
 
