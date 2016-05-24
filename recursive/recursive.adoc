@@ -92,7 +92,7 @@ def tailSum( f:Int => Int , a:Int , b:Int) :Int  ={
 if(a > b) 0
 else f(a) + sum(f , a +1 , b)
 
-f함수(cube or id) sum 함수의 결과 더하기 sum 함수의 호출결과를 더한 값을 return!!
+f함수(cube or id) 함수의 결과 더하기 sum 함수의 호출결과를 더한 값을 return!!
 
 두번째 Recursive 함수는 최종적으로 더해진 값을 return!!
 
