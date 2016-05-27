@@ -4,7 +4,7 @@
 - [Scala 2.11.8 binaries](http://www.scala-lang.org/download/)
 - [Scala IDE for Eclipse](http://scala-ide.org/download/sdk.html)
 - [Scala support for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=itryapitsin.Scala)
-
+- [IntelliJ - Scala Plugin](https://plugins.jetbrains.com/plugin/?id=1347)
 ## 읽을거리
 - [스칼라 학교](https://twitter.github.io/scala_school/ko/index.html)
 - [Programming in Scala, First Edition](http://www.artima.com/pins1ed/index.html)
