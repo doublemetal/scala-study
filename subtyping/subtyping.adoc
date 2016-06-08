@@ -228,4 +228,72 @@ Java 배열은 Scala에서는 Array로 사용합니다.
 
 왜냐하면..scala의 Array는 Covariant하지 않기 때문입니다.^^
 
-이글은 스칼라의 Type Bounds와 Covariant에 대해서 알아보았습니다.
+그럼 공변성 클래스는 어떻게 만들까요..??
+
+스칼라 스쿨에서는 아래와 같이 정의 하고 있습니다.
+(https://twitter.github.io/scala_school/ko/type-basics.html)
+
+image::co.png[]
+
+...
+
+...
+
+...
+
+(개발자는 소스부터..)
+```scala
+class Invariant[T] {
+
+}
+
+object Invariant{
+  def apply[T](a : T) : Invariant[T] =  new Invariant
+}
+
+
+val ar1 : Covariant[NotEmpty] = Covariant(new NotEmpty)
+val ar2 : Covariant[IntSet] = ar1 /*컴파일 오류*/
+
+
+class Covariant[+T] {
+
+}
+
+object Covariant{
+  def apply[T](a : T) : Covariant[T] =  new Covariant
+}
+
+val ar1 : Covariant[NotEmpty] = Covariant(new NotEmpty)
+val ar2 : Covariant[IntSet] = ar1 /*컴파일 성공*/
+
+```
+
+Invariant 클래스는 무공변성으로 선언되었습니다. 즉 정확히 같은 타입의 경우에만 허용이 됩니다.
+
+Covariant 클래스는 공변성으로 선언되었습니다. IntSet이 NotEmpty의 상위클래스인 경우 허용 됩니다.
+
+스칼라학교의 글로 해석해보면...
+
+Container['T] = Covariant[NotEmpty] , Container[T] = Covariant[IntSet]
+
+C['T]는 C[T]의 하위 클래스이다.(OK!!)
+
+
+무공변성은 공변성의 반대가 성립되는 경우 입니다.
+
+```scala
+class Contravariant[-T] {
+
+}
+
+object Contravariant{
+  def apply[T](a : T) : Contravariant[T] =  new Contravariant
+}
+
+
+val ar3: Contravariant[String] = new Contravariant[AnyRef]
+val ar4: Contravariant[AnyRef] = new Contravariant[String] /*컴파일 오류*/
+```
+
+지금까지 스칼라의 Type Bounds와 Covariant에 대해서 알아보았습니다.
