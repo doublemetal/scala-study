@@ -19,3 +19,9 @@
 
 ## 동영상
 - [coursera 스칼라 강의](https://class.coursera.org/progfun-005)
+
+## 추천도서
+- [Programming in Scala (Second Edition)](http://www.yes24.com/24/goods/15205548)
+- [프로그래밍 스칼라](http://www.yes24.com/24/goods/27767797)
+- [스칼라로 배우는 함수형 프로그래밍](http://www.yes24.com/24/goods/16969986)
+- [자바 개발자를 위한 함수형 프로그래밍](http://www.hanbit.co.kr/store/books/look.php?p_code=E7510465152)
