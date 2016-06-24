@@ -296,4 +296,10 @@ val ar3: Contravariant[String] = new Contravariant[AnyRef]
 val ar4: Contravariant[AnyRef] = new Contravariant[String] /*컴파일 오류*/
 ```
 
+* Variance의 몇가지 Rule
+
+ covariant는 리턴 값에만 사용 가능
+ contvariant는 파라미터에만 사용 가능
+ invariant는 아무곳에서 사용 가능
+
 지금까지 스칼라의 Type Bounds와 Covariant에 대해서 알아보았습니다.
