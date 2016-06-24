@@ -12,6 +12,11 @@
 - [자바 프로그래머를 위한 스칼라 튜토리얼](http://docs.scala-lang.org/ko/tutorials/scala-for-java-programmers.html)
 - [The busy Java developer's guide to Scala](http://www.ibm.com/developerworks/java/library/j-scala01228/index.html)
 
+---
+- [Currying](https://github.com/doublemetal/scala-study/blob/master/currying/currying.adoc)
+- [Linear Recursion VS Tail Recursion](https://github.com/doublemetal/scala-study/blob/master/recursive/recursive.adoc)
+- [Type Bounds & Covariant](https://github.com/doublemetal/scala-study/blob/master/subtyping/subtyping.adoc)
+
 ## 슬라이드
 - [Scala로의 산책](http://www.slideshare.net/yumi6/scala-56107367)
 - [Scala For Java Programmers](http://www.slideshare.net/ennorunne/scala-for-java-programmers-2973915)
