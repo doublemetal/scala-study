@@ -153,9 +153,11 @@ mSort4 호출시에는 Ordering type을 전달하지 않고 List만 파라미터
 
 mSort4 호출시 전달된 ord 객체는 아래 그림과 같습니다.
 
-image::debug1.png[]
 
-image::debug2.png[]
+![Debug Image1](debug1.png)
+
+![Debug Image2](debug2.png)
+
 
 숫자를 입력받아 화면에 출력하는 간단한 예제를 만들어 보도록 하겠습니다.
 
