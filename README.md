@@ -16,6 +16,8 @@
 - [Currying](https://github.com/doublemetal/scala-study/blob/master/currying/currying.adoc)
 - [Linear Recursion VS Tail Recursion](https://github.com/doublemetal/scala-study/blob/master/recursive/recursive.adoc)
 - [Type Bounds & Covariant](https://github.com/doublemetal/scala-study/blob/master/subtyping/subtyping.adoc)
+- [Implicit](https://github.com/doublemetal/scala-study/blob/master/implict/implict.md)
+- [Monad](https://github.com/doublemetal/scala-study/blob/master/monad/monad.md)
 
 ## 슬라이드
 - [Scala로의 산책](http://www.slideshare.net/yumi6/scala-56107367)
