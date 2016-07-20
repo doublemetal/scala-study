@@ -22,6 +22,7 @@
 - [Scala For Java Programmers](http://www.slideshare.net/ennorunne/scala-for-java-programmers-2973915)
 - [[H3 2012] 꽃보다 Scala](http://www.slideshare.net/kthcorp/scala-15041890)
 - [Scala Days NYC 2016](http://www.slideshare.net/Odersky/scala-days-nyc-2016)
+
 ## 동영상
 - [coursera 스칼라 강의](https://class.coursera.org/progfun-005)
 
