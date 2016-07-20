@@ -30,5 +30,6 @@
 - [Programming in Scala (Second Edition)](http://book.naver.com/bookdb/book_detail.nhn?bid=8385979)
 - [프로그래밍 스칼라](http://book.naver.com/bookdb/book_detail.nhn?bid=10624831)
 - [스칼라로 배우는 함수형 프로그래밍](http://book.naver.com/bookdb/book_detail.nhn?bid=8829454)
+- [함수형 사고](http://book.naver.com/bookdb/book_detail.nhn?bid=10741266)
 - [자바 개발자를 위한 함수형 프로그래밍](http://book.naver.com/bookdb/book_detail.nhn?bid=7085406)
   - [리얼타임 eBook](http://www.hanbit.co.kr/store/books/look.php?p_code=E7510465152)
