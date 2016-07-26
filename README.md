@@ -1,4 +1,4 @@
-![](http://zigatta.com/wp-content/uploads/2015/07/logo_scala.png)
+![](https://upload.wikimedia.org/wikipedia/en/8/85/Scala_logo.png)
 
 ## 환경설정
 - [Scala 2.11.8 binaries](http://www.scala-lang.org/download/)
@@ -16,11 +16,14 @@
 - [Currying](https://github.com/doublemetal/scala-study/blob/master/currying/currying.adoc)
 - [Linear Recursion VS Tail Recursion](https://github.com/doublemetal/scala-study/blob/master/recursive/recursive.adoc)
 - [Type Bounds & Covariant](https://github.com/doublemetal/scala-study/blob/master/subtyping/subtyping.adoc)
+- [Implicit](https://github.com/doublemetal/scala-study/blob/master/implict/implict.md)
+- [Monad](https://github.com/doublemetal/scala-study/blob/master/monad/monad.md)
 
 ## 슬라이드
 - [Scala로의 산책](http://www.slideshare.net/yumi6/scala-56107367)
 - [Scala For Java Programmers](http://www.slideshare.net/ennorunne/scala-for-java-programmers-2973915)
 - [[H3 2012] 꽃보다 Scala](http://www.slideshare.net/kthcorp/scala-15041890)
+- [Scala Days NYC 2016](http://www.slideshare.net/Odersky/scala-days-nyc-2016)
 
 ## 동영상
 - [coursera 스칼라 강의](https://class.coursera.org/progfun-005)
@@ -29,5 +32,6 @@
 - [Programming in Scala (Second Edition)](http://book.naver.com/bookdb/book_detail.nhn?bid=8385979)
 - [프로그래밍 스칼라](http://book.naver.com/bookdb/book_detail.nhn?bid=10624831)
 - [스칼라로 배우는 함수형 프로그래밍](http://book.naver.com/bookdb/book_detail.nhn?bid=8829454)
+- [함수형 사고](http://book.naver.com/bookdb/book_detail.nhn?bid=10741266)
 - [자바 개발자를 위한 함수형 프로그래밍](http://book.naver.com/bookdb/book_detail.nhn?bid=7085406)
   - [리얼타임 eBook](http://www.hanbit.co.kr/store/books/look.php?p_code=E7510465152)
