@@ -25,6 +25,10 @@ class NotEmpty extends IntSet{
 
 }
 
+class StringSet{
+
+}
+
 object IntSet{
   def asserInfoSet[S <: IntSet](a:S) : S = a
 
@@ -36,28 +40,24 @@ val e = new Empty
 
 e: Empty = Empty@7d61eb55
 
-val b:Empty = IntSet.asserInfoSet(e)
+IntSet.asserInfoSet(e)
 
 b: Empty = Empty@7d61eb55
 
-val c:NotEmpty = IntSet.asserInfoSet(e)
+IntSet.asserInfoSet(new StringSet())
+
 /*
-error: type mismatch;
-found   : Empty
-required: NotEmpty
-      val c:NotEmpty = IntSet.asserInfoSet(e)
-                                           ^
+  Error:(31, 22) type mismatch;
+  found   : A$A62.this.StringSet
+  required: S
+  IntSet.asserInfoSet(new StringSet());}
+                    ^
 */
 ```
 
-
 assertInfoSet 함수를 보면 "[S <: IntSet]" 이런 선언을 확인 할 수 있습니다.
 
-이것은 Java 제너릭 [T extends IntSet]의 의미와 동일합니다.
-
-즉, 파라미터로 IntSet을 상속받은 객체를 파라미터로 받고 동일한 객체를 리턴하라는 의미입니다.
-
-이것을 Upper Bound라고 부릅니다.
+이것은 Java 제너릭 [T extends IntSet]의 의미와 동일하며 스칼라에서는 Upper Bound라고 부릅니다.
 
  "S <: T"는 S가 T의 SubType 이라는 것을 표시합니다.
  "S >: T"는 T가 S의 SubType , S가 T의 Super Type이라는 것을 표시합니다.
@@ -112,7 +112,7 @@ empty2: IntSet = Empty@1ab06251
 
 Empty 클래스는 ChildNotEmpty의 부모 클래스는 아닙니다.
 
-하지만 Empty는 IntSet의 SubType이고, IntSet은 ChildNotEmpty 클래스의 SuperType이기 때문에
+하지만 Empty는 IntSet의 SubType 이면서, ChildNotEmpty 클래스의 SuperType이기 때문에
 
 오류가 발생하지 않는 것입니다. 그럼 아래와 같은 코드는 어떻게 될까요...
 
